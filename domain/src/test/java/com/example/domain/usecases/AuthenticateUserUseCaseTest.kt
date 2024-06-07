@@ -10,16 +10,6 @@ import kotlin.test.assertEquals
 class AuthenticateUserUseCaseTest {
     private val userRepository = mock<UserRepository>()
 
-    companion object {
-        const val USERNAME = "Dmitrii"
-        const val PASSWORD = "password"
-        const val REPEAT_PASSWORD = "password"
-        const val INCORRECT_REPEAT_PASSWORD = "pasword"
-        const val EMAIL = "testmail@gmail.com"
-        const val EMPTY_EMAIL = ""
-        const val EMPTY_PASSWORD = ""
-    }
-
     @Test
     fun `should return success of create account`(): Unit = runBlocking {
 
@@ -96,6 +86,16 @@ class AuthenticateUserUseCaseTest {
         val expected = true
 
         assertEquals(expected, actual)
+    }
+
+    companion object {
+        const val USERNAME = "Katy"
+        const val PASSWORD = "password"
+        const val REPEAT_PASSWORD = "password"
+        const val INCORRECT_REPEAT_PASSWORD = "pasword"
+        const val EMAIL = "testmail@gmail.com"
+        const val EMPTY_EMAIL = ""
+        const val EMPTY_PASSWORD = ""
     }
 
 }
